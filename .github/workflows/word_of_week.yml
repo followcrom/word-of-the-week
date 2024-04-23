@@ -6,8 +6,8 @@ on:
     - cron: "0 18 * * 1"
     # This schedule triggers the workflow every weekday at 6 PM UTC
     # - cron: "0 18 * * 1-5"
-    workflow_dispatch:
-    
+  workflow_dispatch:
+
 
 jobs:
   send-email:
