@@ -1,0 +1,31 @@
+name: Word of the Week
+
+on:
+  schedule:
+    # This schedule triggers the workflow every Monday at 6 PM UTC
+    - cron: "0 18 * * 1"
+    # This schedule triggers the workflow every weekday at 6 PM UTC
+    # - cron: "0 18 * * 1-5"
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run the email script
+        run: python wow_prod.py
+        env:
+          GMAIL_ACCOUNT: ${{ secrets.GMAIL_ACCOUNT }}
+          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+          EMAIL_LIST: ${{ secrets.EMAIL_LIST }}
