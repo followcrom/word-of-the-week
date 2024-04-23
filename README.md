@@ -20,9 +20,19 @@
 
 5. To sort completed_words.csv in Excel: Select all -> Sort & Filter -> Custom Sort -> sort by 'word' -> A to Z. **Note**: Be sure to check _My data has headers_. This ensures that Excel recognizes the first row as headers and excludes it from the sort criteria.
 
-## Test
+## Test workflow locally
 
-To send an email to just one person, run wow_dev.py
+To send an email to just one person, run wow_dev.py.
+
+## Test workflow on GitHub
+
+1. Make sure the workflow YAML file includes the `workflow_dispatch` trigger.
+
+2. Select the Workflow.
+
+3. Run the Workflow: Click on the "Run workflow" button, which you can find on the right side of the workflow page. If the button is not visible, make sure you have the proper permissions to execute actions and that the workflow_dispatch event is correctly set up.
+
+4. Start the Workflow: Confirm by clicking "Run workflow" again in the dropdown menu that appears.
 
 ## Data
 
