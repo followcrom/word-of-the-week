@@ -30,6 +30,6 @@ Create the Alphabetized_Word_List XL Worksheet, run working.py. Note the encodin
 
 ## Updates
 
-- Word count for 23/04/24: 532
+- Word count for 23/04/24: 539
 
 - Word count for 22/04/24: 532
