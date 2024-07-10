@@ -35,7 +35,8 @@ def send_email(word_details):
     toaddr = os.getenv("EMAIL_LIST").split(",")
     msg = MIMEMultipart()
     msg["From"] = "LEXicon John"
-    msg["To"] = ", ".join(toaddr)
+    msg["To"] = "Logophiles"
+    msg["Bcc"] = ", ".join(toaddr)
 
     msg["Subject"] = "Word of the Week"
 

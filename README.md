@@ -56,6 +56,7 @@ Create the alphabetized 'Word_List' XL Worksheet by running `alphabetize.py`. Th
 
 Get the latest word count by running `duplicates.py`.
 
+- Word count for 07/10/24: 559
 - Word count for 05/06/24: 556
 - Word count for 23/04/24: 537
 - Word count for 22/04/24: 532
