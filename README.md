@@ -67,9 +67,9 @@ Get the latest word count by running `duplicates.py`.
 
 <br>
 
-## Troubleshooting & Support 👨‍🔧 🛠️
+## Troubleshooting & Support 👨‍🔧
 
-### Gmail SMTP Error
+### Gmail SMTP Error 🛠️
 
 On changing my Gmail password, the Python script was no longer able to send emails. The error message was:
 
@@ -87,7 +87,55 @@ Google does not allow you to log in via smtplib because it has flagged this as "
 
 - In the `.env` file, use the new app password as **GMAIL_PASSWORD**.
 
-### Copilot
+<br>
+
+### Allow VS Code Through UFW 🤖
+
+If ufw is active, you need to allow connections on the ports used by VS Code. By default, VS Code uses port 22 for SSH and some random ports for its server. Here are the steps to allow those ports:
+
+1. Allow SSH:
+
+```sh
+sudo ufw allow 22/tcp
+```
+
+2. Allow High-Numbered Port Range (to cover dynamically assigned ports):
+
+```sh
+sudo ufw allow 30000:65535/tcp
+```
+
+
+#### Identifying the Ports Used by VS Code 🔬
+
+**Remote - WSL** typically uses dynamically assigned ports. However, you can check the VS Code Remote Server Logs to identify and allow only the required ports:
+
+- Open the Command Palette (Ctrl+Shift+P).
+- Type and select `Remote-WSL: Show Log`.
+- Look for the line that says _"Remote server listening on"_ followed by a port number. This is the port used by the VS Code server.
+- You can also find this under `View -> Output -> Ports`.
+
+```sh
+# Allow Specific Ports:
+sudo ufw allow 60713/tcp
+sudo ufw allow 49893/tcp
+
+# Allow Localhost Connections (optional but useful for internal traffic):
+sudo ufw allow from 127.0.0.1
+
+# Reload UFW:
+sudo ufw reload
+
+# Verify UFW Rules:
+sudo ufw status numbered
+
+# Re-enable ufw if it was disabled
+sudo ufw enable
+```
+
+<br>
+
+### Copilot 🧑‍🚀
 
 `ctrl + enter` to get Copilot suggestions.
 
