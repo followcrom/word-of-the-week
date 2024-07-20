@@ -106,7 +106,7 @@ sudo ufw allow 30000:65535/tcp
 ```
 
 
-#### Identifying the Ports Used by VS Code 🔬
+#### Identifying the Ports Used by VS Code 🔎
 
 **Remote - WSL** typically uses dynamically assigned ports. However, you can check the VS Code Remote Server Logs to identify and allow only the required ports:
 
@@ -117,8 +117,8 @@ sudo ufw allow 30000:65535/tcp
 
 ```sh
 # Allow Specific Ports:
-sudo ufw allow 60713/tcp
-sudo ufw allow 49893/tcp
+sudo ufw allow 60713/tcp # The VS Code Server is bound to port 60713
+sudo ufw allow 49893/tcp # The local proxy server is running on port 49893
 
 # Allow Localhost Connections (optional but useful for internal traffic):
 sudo ufw allow from 127.0.0.1
@@ -132,8 +132,6 @@ sudo ufw status numbered
 # Re-enable ufw if it was disabled
 sudo ufw enable
 ```
-
-<br>
 
 ### Copilot 🧑‍🚀
 
