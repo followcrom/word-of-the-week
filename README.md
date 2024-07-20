@@ -30,11 +30,13 @@ Activate the virtual environment:
 
 5. To sort 'words_for_email.csv' in Excel: Select all -> Sort & Filter -> Custom Sort -> Sort by 'word' -> A to Z. **Note**: Be sure to check _My data has headers_. This ensures that Excel recognizes the first row as headers and excludes it from the sort.
 
+<br>
+
 ## Test workflow locally
 
 To send an email to just one person, run `wow_dev.py`. This requires the `python-dotenv` package to access the environment variables in the `.env` file. This is not required for the GitHub Actions workflow as that uses GitHub Secrets.
 
-**Note**: If you have a .env file in your project directory and the Python extension installed, VS Code automatically loads these variables into terminals it opens. This is not the case in terminals outside of VS Code.
+**Note**: If you have a .env file in your project directory and the Python extension installed, VS Code automatically loads these variables into terminals it opens. This is not the case in terminals outside of VS Code. (Is this true? 🤔 I can run the scripts in Ubuntu 🐧.) 🧐
 
 ## Test workflow on GitHub
 
@@ -45,6 +47,8 @@ To send an email to just one person, run `wow_dev.py`. This requires the `python
 3. Click the 'Run workflow' button on the right side of the workflow page.
 
 4. Start the Workflow: Click 'Run workflow' again in the dropdown menu that appears.
+
+<br>
 
 ## Local data
 
@@ -60,6 +64,32 @@ Get the latest word count by running `duplicates.py`.
 - Word count for 05/06/24: 556
 - Word count for 23/04/24: 537
 - Word count for 22/04/24: 532
+
+<br>
+
+## Troubleshooting & Support 👨‍🔧 🛠️
+
+### Gmail SMTP Error
+
+On changing my Gmail password, the Python script was no longer able to send emails. The error message was:
+
+```
+Failed to send email: (535, b'5.7.8 Username and Password not accepted. …')
+```
+
+Google does not allow you to log in via smtplib because it has flagged this as "Less secure app access". To resolve this, you need to generate an app password.
+
+- Log into your Google account and go to the following link: [https://myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)
+
+- Create a new app password. Type a name for the password and click 'Create'. This will generate a 16-character password.
+
+- The app password for this project is **_wow_**.
+
+- In the `.env` file, use the new app password as **GMAIL_PASSWORD**.
+
+### Copilot
+
+`ctrl + enter` to get Copilot suggestions.
 
 ## Contact
 
