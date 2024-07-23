@@ -87,6 +87,8 @@ Google does not allow you to log in via smtplib because it has flagged this as "
 
 - In the `.env` file, use the new app password as **GMAIL_PASSWORD**.
 
+- For prod, add the app password to GitHub Secrets **without** the quotes.
+
 <br>
 
 ### Allow VS Code Through UFW 🤖
