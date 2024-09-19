@@ -1,4 +1,4 @@
-# W.O.W.
+# 📖 W.O.W. 📆
 
 **Word of the Week** is designed to enrich vocabulary through weekly engagement. A Python script selects an esoteric word from a CSV file. This word, along with its definition and a contextual example sentence, is then emailed to a list of recipients.  GitHub Actions automates the delivery process, ensuring the email arrives reliably at a predetermined time each week.
 
@@ -12,13 +12,13 @@
   <img src="https://www.followcrom.online/images/wordOftheDay.png" width="400">
 </div>
 
-## How to Use
+## How to Use ⚙️
 
 Activate the virtual environment:
 
 `source wow_venv/bin/activate`
 
-## Add New Words
+## 🆕 Add New Words
 
 1. Copy new words from 'new_vocab.txt' to 'new_words_list.csv'. **Note**: Keep the column headers in the csv file.
 
@@ -32,13 +32,13 @@ Activate the virtual environment:
 
 <br>
 
-## Test workflow locally
+## 🔬 Test workflow locally 🏕️
 
 To send an email to just one person, run `wow_dev.py`. This requires the `python-dotenv` package to access the environment variables in the `.env` file. This is not required for the GitHub Actions workflow as that uses GitHub Secrets.
 
 **Note**: If you have a .env file in your project directory and the Python extension installed, VS Code automatically loads these variables into terminals it opens. This is not the case in terminals outside of VS Code. (Is this true? 🤔 I can run the scripts in Ubuntu 🐧.) 🧐
 
-## Test workflow on GitHub
+## Test workflow on GitHub </>
 
 1. Make sure the workflow YAML file includes the 'workflow_dispatch' trigger.
 
@@ -48,20 +48,25 @@ To send an email to just one person, run `wow_dev.py`. This requires the `python
 
 4. Start the Workflow: Click 'Run workflow' again in the dropdown menu that appears.
 
+### Duplicates 👬🏾
+
+`duplicates.py` will check for duplicates.
+
 <br>
 
-## Local data
+## 🏕️ Local data 📊
 
 Check for duplicates in 'words_for_email.csv' by running `duplicates.py`.
 
 Create the alphabetized 'Word_List' XL Worksheet by running `alphabetize.py`. This creates a new file every time it is run. **Note the encoding**; some entries have been removed if they have accents (e.g, éclat).
 
-## Updates
+## 📣 Updates 🔔
 
 Get the latest word count by running `duplicates.py`.
 
-- Word count for 07/10/24: 559
-- Word count for 05/06/24: 556
+- Word count for 19/09/24: 560
+- Word count for 10/07/24: 559
+- Word count for 06/05/24: 556
 - Word count for 23/04/24: 537
 - Word count for 22/04/24: 532
 
