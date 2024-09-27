@@ -4,6 +4,10 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import os
 
+# Only for local development
+# from dotenv import load_dotenv
+# load_dotenv()
+
 words_df = pd.read_csv("./data/words_for_email.csv")
 
 # Get a random word and its details
@@ -29,6 +33,9 @@ def format_word_details(word_row):
 def send_email(word_details):
     fromaddr = os.getenv("GMAIL_ACCOUNT")
     toaddr = os.getenv("EMAIL_LIST").split(",")
+
+    # Debugging - print toaddr to check the formatting
+    print("Email recipients:", toaddr)
 
     msg = MIMEMultipart()
     msg["From"] = "LEXicon John"
