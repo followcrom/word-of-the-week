@@ -33,6 +33,7 @@ def format_word_details(word_row):
 def send_email(word_details):
     fromaddr = os.getenv("GMAIL_ACCOUNT")
     toaddr = os.getenv("EMAIL_LIST").split(",")
+    # toaddr = [email.strip() for email in os.getenv("EMAIL_LIST").split(",")]
 
     # Debugging - print toaddr to check the formatting
     print("Email recipients:", toaddr)
@@ -52,6 +53,7 @@ def send_email(word_details):
             print("Email sent successfully")
         except smtplib.SMTPException as e:
             print(f"Failed to send email: {e}")
+
 
 def main():
     try:
