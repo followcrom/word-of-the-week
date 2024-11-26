@@ -4,10 +4,6 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import os
 
-# Only for local development
-# from dotenv import load_dotenv
-# load_dotenv()
-
 words_df = pd.read_csv("./data/words_for_email.csv")
 
 # Get a random word and its details
@@ -32,27 +28,37 @@ def format_word_details(word_row):
 
 def send_email(word_details):
     fromaddr = os.getenv("GMAIL_ACCOUNT")
-    toaddr = os.getenv("EMAIL_LIST").split(",")
-    # toaddr = [email.strip() for email in os.getenv("EMAIL_LIST").split(",")]
-
-    # Debugging - print toaddr to check the formatting
-    print("Email recipients:", toaddr)
-
-    msg = MIMEMultipart()
-    msg["From"] = "LEXicon John"
-    msg["To"] = "Logophiles"
-    msg["Bcc"] = ", ".join(toaddr)
-    msg["Subject"] = "Word of the Week"
-    msg.attach(MIMEText(word_details, "html"))
-
-    with smtplib.SMTP("smtp.gmail.com", 587) as server:
-        try:
+    toaddr = [email.strip() for email in os.getenv("EMAIL_LIST").split(",")]
+    
+    try:
+        with smtplib.SMTP('smtp.gmail.com', 587) as server:
             server.starttls()
             server.login(fromaddr, os.getenv("GMAIL_PASSWORD"))
-            server.send_message(msg)
-            print("Email sent successfully")
-        except smtplib.SMTPException as e:
-            print(f"Failed to send email: {e}")
+            
+            # Send individual personalized emails
+            for recipient in toaddr:
+                msg = MIMEMultipart()
+                msg["From"] = f"LEXicon John"
+                msg["To"] = recipient
+                msg["Subject"] = "Word of the Week"
+                
+                # Attach the message body
+                msg.attach(MIMEText(word_details, "html"))
+                
+                # Send email to each recipient individually
+                server.send_message(msg)
+                print(f"Email sent to {recipient}")
+        
+        print(f"Total emails sent: {len(toaddr)}")
+    
+    except smtplib.SMTPAuthenticationError:
+        print("SMTP Authentication Error: Check your email and password")
+    except smtplib.SMTPServerDisconnected:
+        print("SMTP Server Disconnected: Check your internet connection")
+    except smtplib.SMTPException as e:
+        print(f"SMTP error occurred: {e}")
+    except Exception as e:
+        print(f"Unexpected error occurred: {e}")
 
 
 def main():
