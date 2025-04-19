@@ -2,11 +2,11 @@
 
 **Word of the Week** is designed to enrich vocabulary through weekly engagement. A Python script selects an esoteric word from a CSV file. This word, along with its definition and a contextual example sentence, is then emailed to a list of recipients.  GitHub Actions automates the delivery process, ensuring the email arrives reliably at a predetermined time each week.
 
-📩 [Subscribe to recieve a word of the week](https://www.followcrom.online/wotd/).
+📩 [Subscribe to recieve a word of the week](https://www.followcrom.com/wotd/).
 
 👨🏻‍💻 For the story behind the project, [read the blog post](https://medium.com/@followcrom/books-bytes-and-daily-insights-c22a4e169b10).
 
-📚 See a selection of the [books that have contributed to Word of the Week](https://www.followcrom.online/wotd/books_list.html).
+📚 See a selection of the [books that have contributed to Word of the Week](https://www.followcrom.com/wotd/books_list.html).
 
 <div align="center">
   <img src="https://www.followcrom.com/images/wordOftheDay.png" width="400">
@@ -20,6 +20,8 @@ Activate the virtual environment:
 
 **Note**: Python scripts may need to be run in the Linux terminal, as 'wow_venv' may not work in VS Code. Have had issues with API keys not being found in VS Code terminal. If this happens, run the scripts in Ubuntu terminal. 🐧
 
+<br>
+
 ## 🆕 Add New Words
 
 1. Copy new words from 'new_vocab.txt' to 'new_words_list.csv'. **Note**: Keep the column headers in the csv file.
@@ -31,6 +33,21 @@ Activate the virtual environment:
 4. Manually copy & paste from 'new_words_list.csv' to 'words_for_email.csv'.
 
 5. To sort 'words_for_email.csv' in Excel: Select all -> Sort & Filter -> Custom Sort -> Sort by 'word' -> A to Z. **Note**: Be sure to check _My data has headers_. This ensures that Excel recognizes the first row as headers and excludes it from the sort.
+
+<br>
+
+## 📣 Updates 🔔
+
+Get the latest word count by running `duplicates.py`.
+
+- Word count for 19/04/25: 573
+- Word count for 12/01/25: 570
+- Word count for 26/11/24: 562
+- Word count for 19/09/24: 560
+- Word count for 10/07/24: 559
+- Word count for 06/05/24: 556
+- Word count for 23/04/24: 537
+- Word count for 22/04/24: 532
 
 <br>
 
@@ -61,21 +78,6 @@ To send an email to just one person, run `wow_dev.py`. This requires the `python
 Check for duplicates in 'words_for_email.csv' by running `duplicates.py`.
 
 Create the alphabetized 'Word_List' XL Worksheet by running `alphabetize.py`. This creates a new file every time it is run. **Note the encoding**; some entries have been removed if they have accents (e.g, éclat).
-
-## 📣 Updates 🔔
-
-Get the latest word count by running `duplicates.py`.
-
-- Word count for 19/04/25: 573
-- Word count for 12/01/25: 570
-- Word count for 26/11/24: 562
-- Word count for 19/09/24: 560
-- Word count for 10/07/24: 559
-- Word count for 06/05/24: 556
-- Word count for 23/04/24: 537
-- Word count for 22/04/24: 532
-
-<br>
 
 ## Troubleshooting & Support 👨‍🔧
 
