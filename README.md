@@ -9,7 +9,7 @@
 📚 See a selection of the [books that have contributed to Word of the Week](https://www.followcrom.online/wotd/books_list.html).
 
 <div align="center">
-  <img src="https://www.followcrom.online/images/wordOftheDay.png" width="400">
+  <img src="https://www.followcrom.com/images/wordOftheDay.png" width="400">
 </div>
 
 ## How to Use ⚙️
@@ -22,7 +22,7 @@ Activate the virtual environment:
 
 1. Copy new words from 'new_vocab.txt' to 'new_words_list.csv'. **Note**: Keep the column headers in the csv file.
 
-2. Run `new_words_list.py` to populate the csv with word types, definitions, and example sentences.
+2. Run `new_words_list.py` to populate the csv with word types, definitions, and example sentences. **NOTE** - last time I ran this in VS Code, it didn't work. It was due to the wrong OpenAI API key. I had to run it in the Linux terminal, which worked. 🧐
 
 3. Check the csv file for any errors.
 
@@ -36,7 +36,7 @@ Activate the virtual environment:
 
 To send an email to just one person, run `wow_dev.py`. This requires the `python-dotenv` package to access the environment variables in the `.env` file. This is not required for the GitHub Actions workflow as that uses GitHub Secrets.
 
-**Note**: If you have a .env file in your project directory and the Python extension installed, VS Code automatically loads these variables into terminals it opens. This is not the case in terminals outside of VS Code. (Is this true? 🤔 I can run the scripts in Ubuntu 🐧.) 🧐
+**Note**: Curious behaviour around the .env file. I thought VS Code automatically loads these variables into terminals it opens, but have had API keys not found in VS Code terminals. If this happens, run the scripts in Ubuntu terminal. 🐧
 
 ## Test workflow on GitHub </>
 
@@ -64,6 +64,7 @@ Create the alphabetized 'Word_List' XL Worksheet by running `alphabetize.py`. Th
 
 Get the latest word count by running `duplicates.py`.
 
+- Word count for 19/04/25: 573
 - Word count for 12/01/25: 570
 - Word count for 26/11/24: 562
 - Word count for 19/09/24: 560
@@ -75,6 +76,16 @@ Get the latest word count by running `duplicates.py`.
 <br>
 
 ## Troubleshooting & Support 👨‍🔧
+
+### 🛠️ Encoding Error
+
+If you encounter an encoding error, run the following script to fix it:
+
+```bash
+py encoding.py
+```
+
+This will create a new file with the correct encoding. The script uses the `chardet` library to detect the encoding of the original file and then saves it in UTF-8 format.
 
 ### Gmail SMTP Error 🛠️
 
@@ -146,11 +157,16 @@ sudo ufw enable
 
 `ctrl + enter` to get Copilot suggestions.
 
+## Commit Activity 📅
+
+![GitHub last commit](https://img.shields.io/github/last-commit/followcrom/word-of-the-week)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/followcrom/word-of-the-week)
+
 ## Contact
 
-🌐 followCrom: [followcrom.online](https://followcrom.online/index.html) 🌐
+🌐 followCrom: [followCrom online](https://followcrom.com/index.html) 🌐
 
-📫 followCrom: [get in touch](https://followcrom.online/contact/contact.php) 📫
+📫 followCrom: [get in touch](https://followcrom.com/contact/contact.php) 📫
 
 ## Contributing
 
