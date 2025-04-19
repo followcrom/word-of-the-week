@@ -36,6 +36,10 @@ Activate the virtual environment:
 
 <br>
 
+### Duplicates 👬🏾
+
+`duplicates.py` will check for duplicates.
+
 ## 📣 Updates 🔔
 
 Get the latest word count by running `duplicates.py`.
@@ -51,12 +55,6 @@ Get the latest word count by running `duplicates.py`.
 
 <br>
 
-## 🔬 Test workflow locally 🏕️
-
-To send an email to just one person, run `wow_dev.py`. This requires the `python-dotenv` package to access the environment variables in the `.env` file. This is not required for the GitHub Actions workflow as that uses GitHub Secrets.
-
-**Note**: Curious behaviour around the .env file. I thought VS Code automatically loads these variables into terminals it opens, but have had API keys not found in VS Code terminals. If this happens, run the scripts in Ubuntu terminal. 🐧
-
 ## Test workflow on GitHub </>
 
 1. Make sure the workflow YAML file includes the 'workflow_dispatch' trigger.
@@ -67,11 +65,13 @@ To send an email to just one person, run `wow_dev.py`. This requires the `python
 
 4. Start the Workflow: Click 'Run workflow' again in the dropdown menu that appears.
 
-### Duplicates 👬🏾
-
-`duplicates.py` will check for duplicates.
-
 <br>
+
+## 🔬 Test workflow locally 🏕️
+
+To send an email to just one person, run `wow_dev.py`. This requires the `python-dotenv` package to access the environment variables in the `.env` file. This is not required for the GitHub Actions workflow as that uses GitHub Secrets.
+
+**Note**: Curious behaviour around the .env file. I thought VS Code automatically loads these variables into terminals it opens, but have had API keys not found in VS Code terminals. If this happens, run the scripts in Ubuntu terminal. 🐧
 
 ## 🏕️ Local data 📊
 
