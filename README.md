@@ -34,8 +34,6 @@ Activate the virtual environment:
 
 5. To sort 'words_for_email.csv' in Excel: Select all -> Sort & Filter -> Custom Sort -> Sort by 'word' -> A to Z. **Note**: Be sure to check _My data has headers_. This ensures that Excel recognizes the first row as headers and excludes it from the sort.
 
-<br>
-
 ### Duplicates 👬🏾
 
 `duplicates.py` will check for duplicates.
@@ -78,6 +76,8 @@ To send an email to just one person, run `wow_dev.py`. This requires the `python
 Check for duplicates in 'words_for_email.csv' by running `duplicates.py`.
 
 Create the alphabetized 'Word_List' XL Worksheet by running `alphabetize.py`. This creates a new file every time it is run. **Note the encoding**; some entries have been removed if they have accents (e.g, éclat).
+
+<br>
 
 ## Troubleshooting & Support 👨‍🔧
 
@@ -156,6 +156,8 @@ sudo ufw status numbered
 # Re-enable ufw if it was disabled
 sudo ufw enable
 ```
+
+<br>
 
 ### Copilot 🧑‍🚀
 
