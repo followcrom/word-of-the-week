@@ -42,6 +42,7 @@ Activate the virtual environment:
 
 Get the latest word count by running `duplicates.py`.
 
+- Word count for 21/06/25: 587
 - Word count for 19/04/25: 573
 - Word count for 12/01/25: 570
 - Word count for 26/11/24: 562
