@@ -36,11 +36,11 @@ Activate the virtual environment:
 
 ### Duplicates 👬🏾
 
-`duplicates.py` will check for duplicates.
+`check_duplicates.py` will check for duplicates.
 
 ## 📣 Updates 🔔
 
-Get the latest word count by running `duplicates.py`.
+Get the latest word count by running `word_count.py`.
 
 - Word count for 21/06/25: 587
 - Word count for 19/04/25: 573
