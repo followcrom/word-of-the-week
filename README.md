@@ -26,7 +26,7 @@ Activate the virtual environment:
 
 1. Copy new words from 'new_vocab.txt' to 'new_words_list.csv'. **Note**: Keep the column headers in the csv file.
 
-2. Run `new_words_list.py` to populate the csv with word types, definitions, and example sentences. **Note**: last time I ran this in VS Code, it didn't work. It was due to the wrong OpenAI API key. I had to run it in the Linux terminal, which worked. 🧐
+2. Run `new_words_list.py` to populate the csv with word types, definitions, and example sentences. 🧐
 
 3. Check the csv file for any errors.
 
@@ -42,6 +42,7 @@ Activate the virtual environment:
 
 Get the latest word count by running `word_count.py`.
 
+- Word count for 12/10/25: 626
 - Word count for 21/06/25: 587
 - Word count for 19/04/25: 573
 - Word count for 12/01/25: 570
