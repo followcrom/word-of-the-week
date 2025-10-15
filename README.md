@@ -8,8 +8,10 @@
 
 📚 See a selection of the [books that have contributed to Word of the Week](https://www.followcrom.com/wotd/books_list.html).
 
+<br>
+
 <div align="center">
-  <img src="https://www.followcrom.com/images/wordOftheDay.png" width="400">
+  <img src="assets/wordOftheDay.png" width="400" style="border-radius: 12px; border: 5px solid #fff;">
 </div>
 
 ## How to Use ⚙️
