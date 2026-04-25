@@ -44,6 +44,7 @@ Activate the virtual environment:
 
 Get the latest word count by running `word_count.py`.
 
+- Word count for 25/04/26: 635
 - Word count for 12/10/25: 626
 - Word count for 21/06/25: 587
 - Word count for 19/04/25: 573
