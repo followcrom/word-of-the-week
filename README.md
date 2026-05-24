@@ -81,12 +81,6 @@ To send an email to just one person, run `wow_dev.py`. This requires the `python
 
 **Note**: Curious behaviour around the .env file. I thought VS Code automatically loads these variables into terminals it opens, but have had API keys not found in VS Code terminals. If this happens, run the scripts in Ubuntu terminal. 🐧
 
-## 🏕️ Local data 📊
-
-Check for duplicates in 'words_for_email.csv' by running `duplicates.py`.
-
-Create the alphabetized 'Word_List' XL Worksheet by running `alphabetize.py`. This creates a new file every time it is run. **Note the encoding**; some entries have been removed if they have accents (e.g, éclat).
-
 <br>
 
 ## Troubleshooting & Support 👨‍🔧
