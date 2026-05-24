@@ -36,11 +36,11 @@ Activate the virtual environment:
 
 3. Check the csv file for any errors.
 
-4. Run merge_words.py to merge the new words with the existing 'words_for_email.csv' file.
+4. Run merge_words.py to merge the new words with the existing 'words_for_email.csv' file. This will also sort alphabetically by word.
 
 #### Manually sort the csv file in Excel 🧑‍💻
 
-5. To sort 'words_for_email.csv' in Excel: Select all -> Sort & Filter -> Custom Sort -> Sort by 'word' -> A to Z. **Note**: Be sure to check _My data has headers_. This ensures that Excel recognizes the first row as headers and excludes it from the sort.
+If you need to sort 'words_for_email.csv' in Excel: Select all -> Sort & Filter -> Custom Sort -> Sort by 'word' -> A to Z. **Note**: Be sure to check _My data has headers_. This ensures that Excel recognizes the first row as headers and excludes it from the sort.
 
 <br>
 
