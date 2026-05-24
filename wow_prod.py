@@ -38,7 +38,7 @@ def send_email(word_details):
             # Send individual personalized emails
             for recipient in toaddr:
                 msg = MIMEMultipart()
-                msg["From"] = f"LEXicon John"
+                msg["From"] = f"The LEXicon Don"
                 msg["To"] = recipient
                 msg["Subject"] = "Word of the Week"
                 

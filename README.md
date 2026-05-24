@@ -26,24 +26,29 @@ Activate the virtual environment:
 
 ## 🆕 Add New Words
 
+### Duplicates 👬🏾
+
+`check_duplicates.py` will check for duplicates.
+
 1. Copy new words from 'new_vocab.txt' to 'new_words_list.csv'. **Note**: Keep the column headers in the csv file.
 
 2. Run `new_words_list.py` to populate the csv with word types, definitions, and example sentences. 🧐
 
 3. Check the csv file for any errors.
 
-4. Manually copy & paste from 'new_words_list.csv' to 'words_for_email.csv'.
+4. Run merge_words.py to merge the new words with the existing 'words_for_email.csv' file.
+
+#### Manually sort the csv file in Excel 🧑‍💻
 
 5. To sort 'words_for_email.csv' in Excel: Select all -> Sort & Filter -> Custom Sort -> Sort by 'word' -> A to Z. **Note**: Be sure to check _My data has headers_. This ensures that Excel recognizes the first row as headers and excludes it from the sort.
 
-### Duplicates 👬🏾
-
-`check_duplicates.py` will check for duplicates.
+<br>
 
 ## 📣 Updates 🔔
 
 Get the latest word count by running `word_count.py`.
 
+- Word count for 24/05/26: 649
 - Word count for 25/04/26: 635
 - Word count for 12/10/25: 626
 - Word count for 21/06/25: 587
