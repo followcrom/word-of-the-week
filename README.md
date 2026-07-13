@@ -36,7 +36,7 @@ Activate the virtual environment:
 
 3. Check the csv file for any errors.
 
-4. Run merge_words.py to merge the new words with the existing 'words_for_email.csv' file. This will also sort alphabetically by word.
+4. Run `merge_words.py` to merge the new words with the existing 'words_for_email.csv' file. This will also sort alphabetically by word.
 
 #### Manually sort the csv file in Excel 🧑‍💻
 
@@ -48,6 +48,7 @@ If you need to sort 'words_for_email.csv' in Excel: Select all -> Sort & Filter 
 
 Get the latest word count by running `word_count.py`.
 
+- Word count for 13/07/26: 651
 - Word count for 24/05/26: 649
 - Word count for 25/04/26: 635
 - Word count for 12/10/25: 626
