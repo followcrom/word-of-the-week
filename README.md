@@ -24,7 +24,7 @@ Activate the virtual environment:
 
 <br>
 
-## 🆕 Add New Words
+## 🆕 Add New Words 🧐
 
 ### Duplicates 👬🏾
 
@@ -32,7 +32,11 @@ Activate the virtual environment:
 
 1. Copy new words from 'new_vocab.txt' to 'new_words_list.csv'. **Note**: Keep the column headers in the csv file.
 
-2. Run `new_words_list.py` to populate the csv with word types, definitions, and example sentences. 🧐
+2. Run `new_words_list.py` to populate the csv with word types, definitions, and example sentences. You can switch between DeepSeek and OpenAI by changing one line near the top of the file:
+
+```python
+PROVIDER = "deepseek"   # or "openai"
+```
 
 3. Check the csv file for any errors.
 
