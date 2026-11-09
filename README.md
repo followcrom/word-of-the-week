@@ -52,6 +52,7 @@ If you need to sort 'words_for_email.csv' in Excel: Select all -> Sort & Filter 
 
 Get the latest word count by running `word_count.py`.
 
+- Word count for 09/11/26: 680
 - Word count for 13/07/26: 651
 - Word count for 24/05/26: 649
 - Word count for 25/04/26: 635
